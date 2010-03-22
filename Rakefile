@@ -5,14 +5,16 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "notifo"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = "A library for using the Notifo iPhone notifications service."
+    gem.description = "A library for using Notifo. Notifo is a way for users to receive mobile notifications for anything, more at http://notifo.com. This gem uses John Nunemaker's awesome HTTParty."
     gem.email = "jonathan.markwell@gmail.com"
     gem.homepage = "http://github.com/jot/notifo"
-    gem.authors = ["jot"]
+    gem.authors = ["Jonathan Markwell"]
+    gem.add_dependency "httparty", "~>0.4.5"
     gem.add_development_dependency "thoughtbot-shoulda"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
+  Jeweler::GemcutterTasks.new
 rescue LoadError
   puts "Jeweler (or a dependency) not available. Install it with: sudo gem install jeweler"
 end

@@ -1,7 +1,18 @@
 = notifo
 
-Description goes here.
+A library for using Notifo. Notifo is a way for users to receive mobile notifications for anything, more at http://notifo.com. This gem uses John Nunemaker's awesome HTTParty.
 
+== Installing
+    $ gem install notifo
+
+== Using notifo
+
+    require 'rubygems'
+    require 'notifo'
+    notifo = Notifo.new("YOUR_NOTIFO_SERVICE_USERNAME","YOUR_NOTIFO_SERVICE_APISECRET")
+    notifo.subscribe_user("A_NOTIFO_USERNAME")
+    notifo.post("A_SUBSCRIBED_NOTIFO_USERNAME","A MESSAGE")
+    
 == Note on Patches/Pull Requests
  
 * Fork the project.
@@ -15,4 +26,4 @@ Description goes here.
 
 == Copyright
 
-Copyright (c) 2010 jot. See LICENSE for details.
+Copyright (c) 2010 Jonathan Markwell. See LICENSE for details.
