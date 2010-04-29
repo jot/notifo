@@ -25,7 +25,7 @@ class Notifo
   # title - name of "notification event"
   # uri - the uri that will be loaded when the notification is opened; if specified, must be urlencoded; if a web address, must start with http:// or https://
   def post(username, msg, title=nil, uri=nil)
-    options = { :body => {:to => username, :msg => msg, :title=>uri, :uri=>uri}, :basic_auth => @auth }
+    options = { :body => {:to => username, :msg => msg, :title=>title, :uri=>uri}, :basic_auth => @auth }
     self.class.post('/send_notification', options)
   end
 end
