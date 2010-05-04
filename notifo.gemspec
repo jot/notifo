@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{notifo}
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jonathan Markwell"]
-  s.date = %q{2010-03-22}
+  s.date = %q{2010-05-04}
   s.description = %q{A library for using Notifo. Notifo is a way for users to receive mobile notifications for anything, more at http://notifo.com. This gem uses John Nunemaker's awesome HTTParty.}
   s.email = %q{jonathan.markwell@gmail.com}
   s.extra_rdoc_files = [
@@ -24,6 +24,7 @@ Gem::Specification.new do |s|
      "Rakefile",
      "VERSION",
      "lib/notifo.rb",
+     "notifo-0.1.0.gem",
      "notifo.gemspec",
      "test/notifo_test.rb",
      "test/test_helper.rb"
@@ -31,7 +32,7 @@ Gem::Specification.new do |s|
   s.homepage = %q{http://github.com/jot/notifo}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.5}
+  s.rubygems_version = %q{1.3.6}
   s.summary = %q{A library for using the Notifo iPhone notifications service.}
   s.test_files = [
     "test/notifo_test.rb",
