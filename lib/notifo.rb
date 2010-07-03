@@ -1,4 +1,6 @@
 require 'httparty'
+require 'cgi'
+require 'digest/sha1'
 
 class Notifo
   include HTTParty
@@ -27,5 +29,18 @@ class Notifo
   def post(username, msg, title=nil, uri=nil)
     options = { :body => {:to => username, :msg => msg, :title=>title, :uri=>uri}, :basic_auth => @auth }
     self.class.post('/send_notification', options)
+  end
+
+  # Require Parameters
+  # params - the hash of params the webhook passed to you. All keys must be *Strings*, not symbols.
+  def verify_webhook_signature(params)
+    signature = params['notifo_signature']
+    other_notifo_params = params.reject {|key,val| !(key =~ /\Anotifo_/ && key != "notifo_signature")}
+    str = other_notifo_params.keys.sort.map do |key|
+      params[key]
+    end.join
+    str << @auth[:password]
+
+    signature == Digest::SHA1.hexdigest(CGI::escape(str))
   end
 end
