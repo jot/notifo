@@ -1,0 +1,10 @@
+--- 
+notifo_service: Message
+notifo_title: ""
+notifo_uri: http://test.com/
+notifo_to_username: testing42
+notifo_signature: 853bbc06ccae3491f3b9e5617f8b2b9dce6f65d5
+notifo_unix_time: "1278988965"
+notifo_message: Test
+notifo_id: "1043960"
+notifo_webhook_url: http://jackowayed-notifo.oncloud.org/
