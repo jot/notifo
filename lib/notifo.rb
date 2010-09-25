@@ -5,7 +5,7 @@ require 'digest/sha1'
 class Notifo
   include HTTParty
   base_uri 'https://api.notifo.com/v1'
-
+  format :json
   # Required Parameters
   # username - notifo service username
   # apikey - notifo service apisecret
