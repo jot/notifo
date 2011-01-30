@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jonathan Markwell"]
-  s.date = %q{2011-01-28}
+  s.date = %q{2011-01-30}
   s.description = %q{A library for using Notifo. Notifo is a way for users to receive mobile notifications for anything, more at http://notifo.com. This gem uses John Nunemaker's awesome HTTParty.}
   s.email = %q{jonathan.markwell@gmail.com}
   s.extra_rdoc_files = [
